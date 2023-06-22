@@ -1,20 +1,14 @@
 [package]
 name = "uniffi-example-geometry"
 edition = "2021"
-version = "0.22.0"
-authors = ["Firefox Sync Team <sync-team@mozilla.com>"]
-license = "MPL-2.0"
-publish = false
+version = "0.1.0"
 
 [lib]
-crate-type = ["lib", "cdylib"]
+crate-type = ["cdylib"]
 name = "uniffi_geometry"
 
 [dependencies]
-uniffi = {path = "../../uniffi"}
+uniffi = "0.23.0"
 
 [build-dependencies]
-uniffi = {path = "../../uniffi", features = ["build"] }
-
-[dev-dependencies]
-uniffi = {path = "../../uniffi", features = ["bindgen-tests"] }
+uniffi = {version = "0.23.0", features = ["build"] }
